@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let name: string;
+  import GenerateVideos from "./Generate-videos.svelte";
 </script>
 
 <main>
@@ -8,6 +8,7 @@
   </header>
   <mid>
     <p>This will be videos.</p>
+    <GenerateVideos />
     <!-- vid list -->
   </mid>
   <footer>
