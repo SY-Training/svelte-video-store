@@ -1,5 +1,5 @@
 <script>
-  import VideoPlayer from "svelte-video-player";
+  //import VideoPlayer from "svelte-video-player";
 
   // These values are bound to properties of the video
   let time = 0;
@@ -11,9 +11,6 @@
 
   // Used to track time of last mouse down event
   let lastMouseDown;
-
-  let videoDir =
-    "https://www.pexels.com/video/a-bullet-train-traveling-fast-above-the-rail-tracks-3273637/";
 
   function handleMove(e) {
     // Make the controls visible, but fade out after
@@ -52,13 +49,16 @@
 
     return `${minutes}:${seconds}`;
   }
+
+  let videoDir =
+    "https://www.pexels.com/video/a-bullet-train-traveling-fast-above-the-rail-tracks-3273637/";
 </script>
 
 <h1>Test Video</h1>
 
-<!-- <div>
+<div>
   <video
-    src={videoDir}
+    src="videos/video.mp4"
     on:mousemove={handleMove}
     on:touchmove|preventDefault={handleMove}
     on:mousedown={handleMousedown}
@@ -79,10 +79,9 @@
       <span class="time">{format(duration)}</span>
     </div>
   </div>
-</div> -->
+</div>
 
-<VideoPlayer source="../../videos/video.mp4" />
-
+<!-- <VideoPlayer source="videos/video.mp4" width="1920" height="1080" /> -->
 <style>
   div {
     position: relative;
