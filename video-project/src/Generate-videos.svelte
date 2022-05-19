@@ -50,15 +50,14 @@
     return `${minutes}:${seconds}`;
   }
 
-  let videoDir =
-    "https://www.pexels.com/video/a-bullet-train-traveling-fast-above-the-rail-tracks-3273637/";
+  let videoDir = "videos/video.mp4";
 </script>
 
 <h1>Test Video</h1>
 
 <div>
   <video
-    src="videos/video.mp4"
+    src={videoDir}
     on:mousemove={handleMove}
     on:touchmove|preventDefault={handleMove}
     on:mousedown={handleMousedown}
