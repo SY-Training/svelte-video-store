@@ -4,7 +4,7 @@ const router = express.Router();
 const port = process.env.PORT || 5000;
 const cors = require('cors');
 const path = require('path');
-import videoList from './videos.json';
+const videoList = require('./videos.json');
 
 let videos = [
     { id:1, name: "train", location: './videos/video.mp4' },
@@ -17,6 +17,11 @@ app.use(express.static('public'));
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 });
+
+app.get('videos', (req, res) => {
+    res.send(videoList);
+})
+
 app.listen(port, () => {
     console.log(`server listening on port ${port}`)
 });
