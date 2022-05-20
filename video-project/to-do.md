@@ -4,6 +4,11 @@ set front end to GET videos from express.
 
 Create simple JSON with video info as DB.
 
+{
+name: "video1",
+location: "dir/file.mp4"
+}
+
 Pass videos back to front end to render.
 
 backup:

@@ -1,0 +1,16 @@
+
+{
+    "videos": [
+    {
+        "id": "1",
+        "name": "train",
+        "location": "videos/video.mp4" 
+    },
+    {
+        "id": "2",
+        "name": "mountain",
+        "location": "videos/video(1).mp4" 
+    }
+]
+
+}
